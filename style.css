@@ -1,0 +1,221 @@
+/*  All boxing will have a default sizing of border-box stlye*/
+* {
+    padding:0;
+    box-sizing: border-box;
+    margin:0;
+}
+/* default scrolling will be smooth on the html with a min height at 100% */
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+/* the body will be relative and there will be a gap between the header with 
+background of white */
+body {
+    background-color: black;
+}
+/* all h3 tags float left at initial */
+h3 {
+    float:left;
+    text-align:initial;
+    font-size: 20px;  
+}
+/* p will all be at font size 16px */
+p {
+    border-left: 2px solid #000;
+    font-size: 26px;
+}
+
+/* Header will have a padding of 20px with font family that is different than the 
+body displayed to a flex and text-aligned to the left so name is on the left and
+ background header will be changed to blue*/
+header {
+    text-align: left;
+      padding: 40px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: black;
+        color: #fff;  
+      }
+
+/* H1 tags in the header will be inline at the font size 48*/
+header h1 {
+    font-size: 48px;
+    width:100%;
+}
+/* the nav tags will display flex with white background color of 
+black floating to the right at font size 20px*/
+nav {
+    display: flex;
+    padding-top: 20px; 
+    float: right;
+    background-color:white;
+    border: black 3px solid;
+}
+/* makine no list style in a wrap*/
+nav ul {
+    list-style-type: none;
+}
+/*displaing list inline-block */
+nav ul li {
+    display: inline-block;
+}
+/* styking of nav a with no text decoartion need to fix so floats top left*/
+nav a {
+    font-size: 36px;
+    color: ivory;
+    text-decoration: none;
+}
+/* changing the color and padding to fit content*/
+nav a {
+    padding: 20px;
+    color: purple;    
+}
+/* making the h2 a content box and fitting content and so it floats
+ to the end will add as backround on top of main*/
+header h2 {
+    display: flex;
+    float:right;
+    background-color: white;
+    color: purple;
+    font-size: 36px;
+    padding-top: 20px;
+    border:black 3px solid;
+}
+/* main will be inline block need to fix contact and resume section */
+main {
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+/* all h3 tags float left at initial displays flex*/
+h3 {
+    display: flex;
+    float:left;
+    padding: 10px;
+    text-align:start;
+    font-size: 36px;
+}
+/* about me has been flexed to fit the page in center 85%  */
+main #about-me {
+    display:flex;
+    text-align: center;
+    width:85%;
+    height: 100%;
+}
+/* puts profile picture on top of about-me
+ section need to figure out hoe to put under h3 
+ about me */
+ main #profpic-image {
+    display: inline-block;
+    background-image: url(./64900534_2099472813511814_6703944336985292800_o.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    min-width: 100px;
+    min-height: 25px;
+    border-radius: 100%;
+}
+/* flex row will adjust
+ to screen so images flex in row wrap*/
+main #project-section {
+    display:flex;
+    flex-flow: row wrap;
+}
+/* the project section will be inline and 
+row wrap to adjust to screen*/
+main #project-section #prod1 #prod2 .project-card {
+    flex: 0 0 auto;
+    display: inline-block;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: center;
+    width: 85%;
+}
+/* project cards displayed in block with border styles */
+ .project-card {
+    border-style: solid;
+    padding: 20px;
+    display: block;
+    border-width: 1px;
+    border-radius: 8px;
+}
+/* specifically larger */
+#prod1 {
+    display: flex;
+    height: 400px;
+   width: 1000px;
+   width:100%;
+   }
+   /* specified smaller than prod1 */
+   #prod2 {
+    display: flex;
+       height:  400px;
+       width: 500px;
+   }
+/* color of header of card */
+.project-card header {
+    padding: 20px;
+    background:white;
+    color:purple;
+}
+/* setting size */
+.project-card image {
+    width: 100%;
+    height:100%;
+}
+/* when mouse hover it changes to opacity of .9 */
+.hover:hover {
+    transition: .5s;
+    opacity: 0.9;
+}
+#contact-me {
+    text-align: center;
+    width:85%;
+    height: 100%;
+}
+/* contact elements flexed */
+.contact-card  {
+  display: flex;
+}
+/* spaces conent out */
+.contact-card {
+    justify-content: space-between;
+}
+/* inline with content in center of the page*/
+.resume-section h4 {
+    display: inline-flex;
+    text-align: center;
+}
+
+/* changes to media when at max-width 768 and changes items into columns*/
+@media screen and (max-width: 992px) {
+    header {
+        background: #000000 ;
+    }
+    /* changes flex flow to flex direction on mobile devices */
+    main #project-section {
+        display:flex;
+        flex-direction: column;
+    }
+    /* specifically larger */
+#prod1 {
+    height: 600px;
+   width: 1000px;
+   display: flex;
+   width:100%;
+   }
+/* specifically fits width */
+#prod2 {
+    height: 400px;
+   width: 500px;
+   display: flex;
+   width:100%;
+      }
+      .project-card image {
+        width: 100%;
+        height:100%;
+    }
+    };
